@@ -1,0 +1,26 @@
+.example-form {
+    width: 500%;
+    color: blue;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+ h1{
+color: palevioletred;
+ align-self: center;
+ }
+
+ button {
+  background-color: brown;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  position: relative;
+  cursor: pointer; 
+  width: 10%;
+ 
+}
+button:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,38 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+  }
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  form
+  {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      width: 100%;
+  }
+  /* button {
+    background-color: brown;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    position: relative;
+    cursor: pointer; 
+    width: 20%;
+   align-content: center;
+  }
+  button:hover {
+    opacity: 0.8;
+  } */
+  

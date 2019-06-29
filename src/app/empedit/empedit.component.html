@@ -1,0 +1,43 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo"
+    src="https://www.allindiajobs.in/wp-content/uploads/2018/06/logo-1-1-6jzpxilwsr5dz3in35dhitbv0j7i319xx834udsgiue.png">
+</div>
+<button mat-button color="warn" style="float: right" (click)="gotolistPage()"
+  aria-label="Example icon-button with a heart icon">
+  <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+  </button>
+<h1>Edit</h1>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput [(ngModel)]="employee.employeeName" placeholder="Enter The EmployeeName" name="EmployeeName"
+      [ngModelOptions]="{standalone: true}">
+  </mat-form-field><br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput [(ngModel)]="employee.employeeAddress" placeholder="Enter your address" name="EmployeeAddress"
+      [ngModelOptions]="{standalone: true}">
+  </mat-form-field><br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput [(ngModel)]="employee.employeeSalary" placeholder="Enter The Employee salary" name="EmployeeSalary"
+      [ngModelOptions]="{standalone: true}">
+  </mat-form-field><br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput [(ngModel)]="employee.employeeEmail" placeholder="Enter The Employee email" name="EmployeeEmail"
+      [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  
+
+
+
+
+
+</form>
+
+<button mat-flat-button color="primary" (click)="onUpdate()" aria-label="Example icon-button with a heart icon">
+  Update
+</button>

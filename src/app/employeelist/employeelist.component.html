@@ -1,0 +1,119 @@
+<h3 align="center">Show the All Employees<br>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <br>
+  <button mat-button color="warn" style="float: right" (click)="gotolistPage()"
+  aria-label="Example icon-button with a heart icon">
+  <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+  </button>
+  
+
+
+<!-- <button mat-stroked-button (click)="gotolistPage()">GoBack</button> -->
+
+  </h3>
+  <!-- <div style="text-align:right">
+      <img width="200" alt="Angular Logo" src="https://www.allindiajobs.in/wp-content/uploads/2018/06/logo-1-1-6jzpxilwsr5dz3in35dhitbv0j7i319xx834udsgiue.png">
+    </div>  -->
+    <mat-form-field>
+    <input matInput (keyup)="Filter($event.target.value)" placeholder="Search">
+  </mat-form-field>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+   <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+    <ng-container matColumnDef="employeeName">
+      <th mat-header-cell *matHeaderCellDef> employeeName </th>
+      <td mat-cell *matCellDef="let row"> {{row.employeeName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="employeeEmail">
+      <th mat-header-cell *matHeaderCellDef> employeeEmail </th>
+      <td mat-cell *matCellDef="let row"> {{row.employeeEmail}} </td>
+    </ng-container>
+    <!-- <ng-container matColumnDef="joinDate">
+        <th mat-header-cell *matHeaderCellDef> joinDate </th>
+        <td mat-cell *matCellDef="let row"> {{row.joinDate}} </td>
+      </ng-container> -->
+      <ng-container matColumnDef="joinDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 
+           <span translate>date</span>
+        </th>
+        <td mat-cell *matCellDef="let row"> 
+           {{row.joinDate}}
+        </td>
+      </ng-container>
+    <ng-container matColumnDef="employeeAddress">
+      <th mat-header-cell *matHeaderCellDef> employeeAddress </th>
+      <td mat-cell *matCellDef="let row"> {{row.employeeAddress}} </td>
+    </ng-container>
+    <ng-container matColumnDef="employeeSalary">
+      <th mat-header-cell *matHeaderCellDef> employeesalary </th>
+      <td mat-cell *matCellDef="let row"> {{row.employeeSalary}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Delete Employees </th>
+      <td mat-cell *matCellDef="let row" >
+           <button mat-stroked-button (click)="deleteEmployee(row.id)"> 
+            <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+           </button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="actionss">
+      <th mat-header-cell *matHeaderCellDef> Update Employees </th>
+      <td mat-cell *matCellDef="let row" >
+          <!-- <button mat-button color="warn" style="float: right" (click)="updateEmployee(row)"
+          aria-label="Example icon-button with a heart icon">
+          Upd
+        </button> -->
+           <button mat-stroked-button (click)="updateEmployee(row)"> 
+             <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+          </button>
+      </td>
+    </ng-container>
+    <!-- <ng-container matColumnDef="ids">
+      <th mat-header-cell *matHeaderCellDef> Selectid </th>
+      <td mat-cell *matCellDef="let row" >
+           <button mat-button (click)="EmployeeByid(row.id)">Update</button>
+      </td>
+    </ng-container> -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]"></mat-paginator>
+  </div>
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
